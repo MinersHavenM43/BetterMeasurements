@@ -1,0 +1,6 @@
+This mod makes improvements to the measurements displayed in the game, such as the units in the information displays. This lets you use the metric system, by having the speed measured in kilometres per hour and position measured in tiles or metres, and in even more units!
+Much of the mod can be changed through the Config.
+
+Changelog
+
+1.0.0: Mod has materialised into existence.
