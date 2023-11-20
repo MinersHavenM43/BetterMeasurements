@@ -1,0 +1,4 @@
+EastWind: " ({0} E)"
+WestWind: " ({0} W)"
+CompassEast: "{0} East"
+CompassWest: "{0} West"

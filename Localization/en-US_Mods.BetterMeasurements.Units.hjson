@@ -1,0 +1,22 @@
+Distance: {
+	FeetCompact: "{0}'"
+	Feet: "{0} ft"
+	Tiles: "{0} tl"
+	TilesCompact: "{0}*"
+	Metres: "{0} m"
+	Pixels: "{0} px"
+}
+
+Speed: {
+	MilesPerHour: "{0} mph"
+	MilesPerHourSI: "{0} mi/h"
+	KilometresPerHour: "{0} km/h"
+	MetresPerSecond: "{0} m/s"
+	TilesPerSecond: "{0} tl/s"
+	PixelsPerTick: "{0} px/tc"
+}
+
+DPS: {
+	DPSFull: "{0} damage per second"
+	DPSCompact: "{0} DPS"
+}
