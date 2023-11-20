@@ -1,0 +1,71 @@
+UnitConfig: {
+	DisplayName: Configuration
+
+	distanceUnitID: {
+		Label: Distance Unit
+		Tooltip:
+			'''
+			1: Compact feet (100')
+			2: Feet (100 ft)
+			3: Tiles (50 tl)
+			4: Compact tiles (50*)
+			5: Metres (30.4 m)
+			6: Pixels (800 px)
+			'''
+	}
+
+	speedUnitID: {
+		Label: Speed Unit
+		Tooltip:
+			'''
+			1: Miles per hour (100 mph)
+			2: SI miles per hour (100 mi/h)
+			3: Kilometres per hour (161 km/h)
+			4: Metres per second (45 m/s)
+			5: Tiles per second (73 tl/s)
+			6: Pixels per tick (20 px/tc)
+			'''
+	}
+
+	DPSUnitID: {
+		Label: Damage per Second Unit
+		Tooltip:
+			'''
+			1: Vanilla (100 damage per second)
+			2: Compact (100 DPS)
+			'''
+	}
+
+	depthMeterRoundUp: {
+		Label: Round Up Depth Meter Values
+		Tooltip:
+			'''
+			Rounds the value displayed by the Depth Meter up, making 1.5' Underground become 1' Underground.
+			Enable for Vanilla behaviour.
+			'''
+	}
+
+	weatherRadioCycle: {
+		Label: Show Sandstorm in Weather Radio
+		Tooltip:
+			'''
+			Periodically cycles between wind information and Sandstorm information (if there is one occuring).
+			With this disabled, only a "+" appears at the end during a Sandstorm.
+			Enable for Vanilla behaviour.
+			'''
+	}
+
+	rounding: {
+		Label: Round Values
+		Tooltip:
+			'''
+			If enabled, rounds display numbers to one or no decimal places, depending on the unit.
+			Useful for debugging.
+			'''
+	}
+
+	Header: {
+		Units: "[i:3095] Units"
+		Misc: "[i:207] Miscellaneous"
+	}
+}
