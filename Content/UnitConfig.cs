@@ -5,7 +5,7 @@ namespace BetterMeasurements.Content {
 	public class UnitConfig : ModConfig {
 		public override ConfigScope Mode => ConfigScope.ClientSide;
 		
-		[Header("$Mods.BetterMeasurements.Configs.Header.Units")]
+		[Header("$Mods.BetterMeasurements.Configs.UnitConfig.Header.Units")]
 		[DefaultValue(5)]
 		public int distanceUnitID;
 		[DefaultValue(3)]
@@ -13,7 +13,9 @@ namespace BetterMeasurements.Content {
 		[DefaultValue(1)]
 		public int DPSUnitID;
 		
-		[Header("$Mods.BetterMeasurements.Configs.Header.Misc")]
+		[Header("$Mods.BetterMeasurements.Configs.UnitConfig.Header.Misc")]
+		[DefaultValue(true)]
+		public bool weatherRadioCycle;
 		[DefaultValue(true)]
 		public bool depthMeterRoundUp;
 		[DefaultValue(true)]
