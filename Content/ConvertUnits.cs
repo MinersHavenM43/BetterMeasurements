@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Terraria.Localization;
 
 namespace BetterMeasurements.Content {
 	public class Unit {
@@ -14,27 +15,24 @@ namespace BetterMeasurements.Content {
 	}
 	public class ConvertUnits {
 		private static readonly List<Unit> distanceUnitList = new() {
-			new Unit("'",  0.125f),
-			new Unit(" ft",  0.125f),
-			new Unit(" tl",  0.0625f),
-			new Unit("*",  0.0625f),
-			new Unit(" m",  0.0381f, 1),
-			new Unit(" px",  1f),
-			new Unit(".",  1f)
+			new Unit("FeetCompact",  0.125f),
+			new Unit("Feet",  0.125f),
+			new Unit("Tiles",  0.0625f),
+			new Unit("TilesCompact",  0.0625f),
+			new Unit("Metres",  0.0381f, 1),
+			new Unit("Pixels",  1f)
 		};
 		private static readonly List<Unit> speedUnitList = new() {
-			new Unit(" mph",  5.11363636f),
-			new Unit(" mi/h",  5.11363636f),
-			new Unit(" km/h", 8.2296f),
-			new Unit(" m/s",  2.286f),
-			new Unit(" tl/s",  3.75f),
-			new Unit(" px/tc", 1f, 1)
+			new Unit("MilesPerHour",  5.11363636f),
+			new Unit("MilesPerHourSI",  5.11363636f),
+			new Unit("KilometresPerHour", 8.2296f),
+			new Unit("MetresPerSecond",  2.286f),
+			new Unit("TilesPerSecond",  3.75f),
+			new Unit("PixelsPerTick", 1f, 1)
 		};
 		private static readonly List<Unit> DPSUnitList = new() {
-			new Unit(" damage per second",  1f),
-			new Unit(" DPS",  1f),
-			new Unit(" d/s", 1f),
-			new Unit(" D/s",  1f)
+			new Unit("DPSFull",  1f),
+			new Unit("DPSCompact",  1f)
 		};
 		
 		public static void VerifyConfig(UnitConfig unitConfigArg, ref bool isDistanceUnitBroken, ref bool isSpeedUnitBroken, ref bool isDPSUnitBroken) {
@@ -64,14 +62,14 @@ namespace BetterMeasurements.Content {
 			return value * SpeedUnit().fromPxUnits;
 		}
 		
-		public static string JoinDistance(float value, string direction) {
-			return value.ToString() + DistanceUnit().symbol + " " + direction;
+		public static string JoinDistance(float value) {
+			return Language.GetTextValue("Mods.BetterMeasurements.Units.Distance." + DistanceUnit().symbol, value);
 		}
 		public static string JoinSpeed(float value) {
-			return value.ToString() + SpeedUnit().symbol;
+			return Language.GetTextValue("Mods.BetterMeasurements.Units.Speed." + SpeedUnit().symbol, value);
 		}
 		public static string JoinDPS(int value) {
-			return value.ToString() + DPSUnit().symbol;
+			return Language.GetTextValue("Mods.BetterMeasurements.Units.DPS." + DPSUnit().symbol, value);
 		}
 
 		public static float DistanceFloor(float value) {
